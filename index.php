@@ -52,8 +52,9 @@ $menu=array(
         
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
+            <?php //foreach ($menu as $item): ?>
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">WebSiteName</a>
+              <a class="navbar-brand" href="#">Math dice</a>
             </div>
             <div>
               <ul class="nav navbar-nav">
@@ -71,6 +72,7 @@ $menu=array(
                 <li><a href="#">Page 3</a></li>
               </ul>
             </div>
+            <?php //endforeach; ?>
           </div>
         </nav>
         

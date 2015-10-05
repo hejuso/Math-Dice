@@ -51,9 +51,7 @@ $menu=array(
     </head>
     <body>
         
-        <?php foreach ($menu['portada'] as $item): ?>
-           <li class="active"><a href="#"><?php echo $item ?></a></li>
-        <?php endforeach; ?>
+           <li class="active"><a href="#"><?php echo $menu['portada'][$lang] ?></a></li>
 
     </body>
 </html>

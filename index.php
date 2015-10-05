@@ -1,6 +1,6 @@
 <?php
 //Array multilenguaje
-$lang="en";
+$lang="sp";
 $menu=array(
     "titulo"=>array(
         "sp"=>"Math Dice",
@@ -41,7 +41,7 @@ $menu=array(
 ?>
 <html>
     <head>
-        <title>Docuemento de prueba</title>
+        <title>Math Dice</title>
         <meta charset="UTF-8">
  <!-- Bootstrap -->
         
@@ -55,28 +55,32 @@ $menu=array(
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">Math dice</a>
+              <a class="navbar-brand" href="#"><?php echo $menu['titulo'][$lang]?> </a>
             </div>
             <div>
               <ul class="nav navbar-nav">
-                <?php //foreach ($menu as $item): ?>
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                <li class="active"><a href="#"><?php echo $menu['portada'][$lang]?></a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $menu['tiposJuego'][$lang]?> <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      
-                    <li><a href="#">Page 1-1</a></li>
-                    <li><a href="#">Page 1-2</a></li>
-                    <li><a href="#">Page 1-3</a></li>
-                    
+                    <?php // Foreach anidado para generar el submenú
+                    foreach( $menu['tiposJuego'] as $clave => $valor ){
+                        
+                        //If para comprobar si es un submenú (probablemente se puede prescindir de el)
+                        if($clave == 'submenu'){
+                            
+                            //Con este foreach insertamos el array anteriormente recorrido en unas nuevas listas ordenadas
+                        foreach ($valor as $tiposJu){ ?>
+                            <li><a href="#"><?php echo $tiposJu[$lang] ?></a></li>
+                    <?php } ?>
+                    <?php }
+                    }?>
                   </ul>
                 </li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-                <?php //endforeach; ?>
+                <li><a href="#"><?php echo $menu['instrucciones'][$lang]?></a></li>
+                <li><a href="#"><?php echo $menu['acercaDe'][$lang]?></a></li>
               </ul>
             </div>
           </div>
         </nav>
-        
     </body>
 </html>

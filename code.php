@@ -1,7 +1,6 @@
-
 <?php
 //Array multilenguaje
-$lang="en";
+$lang="sp";
 $menu=array(
     "titulo"=>array(
         "sp"=>"Math Dice",
@@ -45,15 +44,16 @@ $menu=array(
         <title>Documento de prueba</title>
         <meta charset="UTF-8">
  <!-- Bootstrap -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
     </head>
     <body>
         
-        <?php foreach ($menu as $item): ?>
-                <li class="active"><a href="#"><?php echo $item["titulo"][$lang] ?></a></li>
-            <?php endforeach; ?>
+        <?php foreach ($menu['portada'] as $item): ?>
+           <li class="active"><a href="#"><?php echo $item ?></a></li>
+        <?php endforeach; ?>
 
     </body>
 </html>

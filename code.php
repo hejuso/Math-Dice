@@ -27,6 +27,26 @@
         //Pruebas para insercion de dado.
         
             echo dadoAleatorio();
+            
+        ?>
+        
+        <!-- Pruebas para el botón de tirar dado -->
+        
+        <form method="post">
+            
+            <div class='tirarDado'><input type="submit" name="submit" value='¡Tira el dado!' class='btn btn-primary'></input></div>
+        
+        </form>
+        
+        <?php
+        
+            //Intento de que cuando detecte un submit de el botón cambie la imagen. Efectivamente lo hace, pero actualiza la página, cosa que no quiero.
+            
+            if(isset($_POST["submit"])) {
+                
+                echo dadoAleatorio();
+                
+            }
         
         ?>
         

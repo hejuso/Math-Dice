@@ -64,10 +64,26 @@ include 'dado.php';
     
     <div class="row">
         <?php 
+            
+            //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
+        
             echo dadoAleatorio();
+            
         ?>
         
-        <div class="tirarDado"><button type="button" class="btn btn-primary">¡Tira el dado!</button></div>
+        <!-- Intento "fallido" de añadir un botón para que tire el dado.
+             Por lo que parece hay que hacer uso de javascript y/o de AJAX, ya que
+             no se pueden poner funciones de php en botones. 
+            El botón lo único que hace es actualizar la pagina.     
+        -->
+        
+        <div class="tirarDado">
+            <form method="post">
+            
+                <input type="submit" name="submit" value='¡Tira el dado!' class='btn btn-primary'></input>
+        
+            </form>
+        </div>
         
     </div>
   

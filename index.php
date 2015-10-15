@@ -82,5 +82,8 @@ $menu=array(
             </div>
           </div>
         </nav>
+        
+        <b>Hola</b>
+        
     </body>
 </html>

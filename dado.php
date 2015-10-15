@@ -1,10 +1,12 @@
 <?php
+
+    $arr1=array('dado1.png','dado2.png','dado3.png','dado4.png','dado5.png','dado6.png');
     
     function dados1al6(){
         
         //Sentencia FOR para mostrar los dados.
-
-        $arr1=array('dado1.png','dado2.png','dado3.png','dado4.png','dado5.png','dado6.png');
+        
+        global $arr1;
 
         for($i=0; $i<count($arr1); $i++) {
             
@@ -17,7 +19,7 @@
     function dadoAleatorio(){
         //Necesito algo para no tener que repetir arrays.
         
-        $arr1=array('dado1.png','dado2.png','dado3.png','dado4.png','dado5.png','dado6.png');
+        global $arr1;
         
         $numAleatorio = rand(0,5);
             

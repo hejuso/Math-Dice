@@ -1,42 +1,9 @@
 <?php
     //Array multilenguaje
-$lang="sp";
-$menu=array(
-    "titulo"=>array(
-        "sp"=>"Math Dice",
-        "en"=>"Math Dice"
-        ),
-    "portada"=>array(
-        "sp"=>"Inicio",
-        "en"=>"Home"
-        ),
-    "tiposJuego"=>array(
-        "sp"=>"Tipos de juego",
-        "en"=>"Game modes",
-        "submenu"=>array(
-            "tipo1"=>array(
-                "sp"=>"Juego estándar",
-                "en"=>"Standard Game"
-                ),
-            "tipo2"=>array(
-                "sp"=>"Juego dificil",
-                "en"=>"Hard Game"
-                ),
-            "tipo3"=>array(
-            "sp"=>"Juego personalizado",
-            "en"=>"Custom Game"
-            ),
-            )
-        ),
-    "instrucciones"=>array(
-        "sp"=>"Instrucciones",
-        "en"=>"Instructions"
-        ),
-    "acercaDe"=>array(
-        "sp"=>"Acerca de",
-        "en"=>"About"
-        ),
-    )
+include 'conf.php';
+    
+    //Dados
+include 'dado.php';
 ?>
 <html>
     <head>
@@ -45,6 +12,7 @@ $menu=array(
  <!-- Bootstrap -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dado.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  
@@ -82,7 +50,28 @@ $menu=array(
           </div>
         </nav>
         
-        <b>Hola</b>
+<div class="container">
+    
+    <div class="row">
+        <?php 
+        //Aquí hacemos que nos muestre de forma automática las imágenes de los dados.
+        echo dados1al6(); ?>
+    </div>
+  
+    <div class="row">
+        <div class='col-xs-7'><h1>Dado aleatorio:</h1></div>
+    </div>
+    
+    <div class="row">
+        <?php 
+            echo dadoAleatorio();
+        ?>
+        
+        <div class="tirarDado"><button type="button" class="btn btn-primary">¡Tira el dado!</button></div>
+        
+    </div>
+  
+</div>
         
     </body>
 </html>

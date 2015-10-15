@@ -36,5 +36,6 @@ $menu=array(
         "sp"=>"Acerca de",
         "en"=>"About"
         ),
-    )
+    );
+    
 ?>

@@ -65,6 +65,15 @@ include 'dado.php';
             dadoAleatorio();
             
         ?>
+     <div class="row">
+        <div class="tirarDado">
+            <form method="post">
+            
+                <input type="submit" name="submit" value='¡Tira el dado!' class='btn btn-primary'></input>
+        
+            </form>
+        </div>
+        </div>
         
         <!-- Intento "fallido" de añadir un botón para que tire el dado.
              Por lo que parece hay que hacer uso de javascript y/o de AJAX, ya que
@@ -73,6 +82,7 @@ include 'dado.php';
         -->
         
         <div class='container'>
+        <div class='row'>
             <div class='col-xs-3'>
                 <form role="form">
                       <div class="form-group">
@@ -93,15 +103,6 @@ include 'dado.php';
                       <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
-        </div>
-        
-        <div class="">
-        <div class="tirarDado">
-            <form method="post">
-            
-                <input type="submit" name="submit" value='¡Tira el dado!' class='btn btn-primary'></input>
-        
-            </form>
         </div>
         </div>
         

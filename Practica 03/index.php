@@ -72,12 +72,37 @@ include 'dado.php';
             El botón lo único que hace es actualizar la pagina.     
         -->
         
+        <div class='container'>
+            <div class='col-xs-3'>
+                <form role="form">
+                      <div class="form-group">
+                        <label for="text">Dado 1</label>
+                        <input type="text" class="form-control" id="text">
+                      </div>
+                      
+                      <div class="radio">
+                        <label><input type="radio" name="signo"> +</label><br>
+                        <label><input type="radio" name="signo"> -</label>
+        
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="text">Dado 2</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="">
         <div class="tirarDado">
             <form method="post">
             
                 <input type="submit" name="submit" value='¡Tira el dado!' class='btn btn-primary'></input>
         
             </form>
+        </div>
         </div>
         
     </div>

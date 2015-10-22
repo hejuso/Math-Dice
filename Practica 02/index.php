@@ -35,7 +35,7 @@ include 'dado.php';
                         //If para comprobar si es un submenú (probablemente se puede prescindir de el)
                         if($clave == 'submenu'){
                             
-                            //Con este foreach insertamos el array anteriormente recorrido en unas nuevas listas ordenadas
+                        //Con este foreach insertamos el array anteriormente recorrido en unas nuevas listas ordenadas
                         foreach ($valor as $tiposJu){ ?>
                             <li><a href="#"><?php echo $tiposJu[$lang] ?></a></li>
                     <?php } ?>

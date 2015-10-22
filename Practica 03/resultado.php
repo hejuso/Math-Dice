@@ -53,11 +53,8 @@ include 'dado.php';
     
     </head>
     
-    
     <?php
-    
-        echo "numero 1: ".$_POST[num1];
-    
+     echo compSumaDado($_POST['dado1'], $_POST['dado2'], $_POST['num1'], $_POST['signo'], $_POST['num2']);
     ?>
     
     

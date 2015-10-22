@@ -10,3 +10,9 @@
     border: 35px solid #fff;
     
 }
+
+.invisible {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}

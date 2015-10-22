@@ -1,4 +1,5 @@
-<?php
+    
+    <?php
     //Array multilenguaje
 include 'conf.php';
     
@@ -26,7 +27,7 @@ include 'dado.php';
             </div>
             <div>
               <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php"><?php echo $menu['portada'][$lang]?></a></li>
+                <li><a href="index.php"><?php echo $menu['portada'][$lang]?></a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $menu['tiposJuego'][$lang]?> <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <?php // Foreach anidado para generar el submenú
@@ -49,62 +50,16 @@ include 'dado.php';
             </div>
           </div>
         </nav>
-        
-<div class="container">
-  
-    <div class="row">
-        <div class='col-xs-3'><h1>Dado aleatorio:</h1></div>
-    </div>
     
-    <div class="row">
-        <?php 
-            
-            //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
-        
-            dadoAleatorio();
-            dadoAleatorio();
-            
-        ?>
-     <div class="row">
-        <div class="tirarDado">
-            <form method="post">
-            
-                <input type="submit" name="submit" value='¡Tira el dado!' class='btn btn-primary'></input>
-        
-            </form>
-        </div>
-        </div>
-        
-        <!-- Formulario en el que se comprueba el valor del dado con el del campo de texto -->
-        
-        <div class='container'>
-        <div class='row'>
-            <div class='col-xs-3'>
-                <form role="form" action="resultado.php" method="post">
-                      <div class="form-group">
-                        <label for="text">Dado 1</label>
-                        <input type="text" class="form-control" name="num1" id="text">
-                      </div>
-                      
-                      <div class="radio">
-                        <label><input type="radio" name="signo"> + </label><br>
-                        <label><input type="radio" name="signo"> - </label>
-        
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="text">Dado 2</label>
-                        <input type="text" name="num2" class="form-control">
-                      </div>
-                      <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </div>
-        </div>
-        </div>
-        
-    </div>
-  
-</div>
-        
+    </head>
+    
+    
+    <?php
+    
+        echo "numero 1: ".$_POST[num1];
+    
+    ?>
+    
+    
     </body>
 </html>

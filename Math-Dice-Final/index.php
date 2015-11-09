@@ -1,102 +1,70 @@
-<?php
-    //Array multilenguaje
-include 'conf.php';
-    
-    //Dados
-include 'dado.php';
-?>
 <html>
     <head>
         <title>Math Dice</title>
         <meta charset="UTF-8">
- <!-- Bootstrap -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/dado.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
- 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/dado.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     
     </head>
     <body>
         
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="index.php"><?php echo $menu['titulo'][$lang]?> </a>
-            </div>
-            <div>
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php"><?php echo $menu['portada'][$lang]?></a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $menu['tiposJuego'][$lang]?> <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <?php // Foreach anidado para generar el submenú
-                    foreach( $menu['tiposJuego'] as $clave => $valor ){
-                        
-                        //If para comprobar si es un submenú (probablemente se puede prescindir de el)
-                        if($clave == 'submenu'){
-                            
-                            //Con este foreach insertamos el array anteriormente recorrido en unas nuevas listas ordenadas
-                        foreach ($valor as $tiposJu){ ?>
-                            <li><a href="#"><?php echo $tiposJu[$lang] ?></a></li>
-                    <?php } ?>
-                    <?php }
-                    }?>
-                  </ul>
-                </li>
-                <li><a href="#"><?php echo $menu['instrucciones'][$lang]?></a></li>
-                <li><a href="#"><?php echo $menu['acercaDe'][$lang]?></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        
-  
-        <!-- Formulario en el que se comprueba el valor del dado con el del campo de texto -->
-        
-        <div class='container'>
-
-                <form role="form" action="resultado.php" method="post">
-                  
-                    <div class="row">
-                        <div class='col-xs-12'><h1>Dado aleatorio:</h1></div>
-                    </div>
-                    
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class='col-xs-5'>
-                            
-                            <?php 
-                                //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
-                                dadoAleatorio(1);
-                                dadoAleatorio(2);
-                            ?>
-                            
-                            </div>
-                            <div class='col-xs-3'>
-                            <div class="form-group">
-                                <label for="text">Dado 1</label>
-                                <input type="text" class="form-control" name="num1" id="text">
-                            </div>
-                      
-                            <div class="radio">
-                                <label><input type="radio" name="signo" checked value="+"> + </label><br>
-                                <label><input type="radio" name="signo" value="-"> - </label>
-                            </div>
-                      
-                            <div class="form-group">
-                                <label for="text">Dado 2</label>
-                                <input type="text" name="num2" class="form-control">
-                            </div>
-                            
-                            <button type="submit" class="btn btn-default">Enviar</button>
-                            </div>
-                        </div>    
-                    </div>
-
-                    
-                </form>
+        <div class="row">
+            
         </div>
-  
         
-    </body>
+        <form class="form-horizontal">
+            <fieldset>
+                
+            <!-- Introducir nombre-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Nombre</label>  
+              <div class="col-md-4">
+              <input id="name" name="name" type="text" placeholder="Introduzca su nombre" class="form-control input-md" required="">
+                
+             </div>
+            </div>
+            
+            <!-- Introducir apellidos-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="apellidos">Apellidos</label>  
+              <div class="col-md-4">
+              <input id="apellidos" name="apellidos" type="text" placeholder="Introduzca sus apellidos" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Introducir Edad-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="edad">Edad</label>  
+              <div class="col-md-4">
+              <input id="edad" name="edad" type="text" placeholder="Introduzca su edad" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Modo de juego -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="tipoJuego">Tipo de juego</label>
+              <div class="col-md-4">
+                <select id="tipoJuego" name="tipoJuego" class="form-control">
+                  <option value="junior">Junior</option>
+                  <option value="junior+">Junior+</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Submit -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-primary">¡Jugar!</button>
+              </div>
+            </div>
+            
+            </fieldset>
+        </form>
+        
+    </body>    
 </html>

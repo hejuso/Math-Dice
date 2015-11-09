@@ -1,0 +1,21 @@
+.inicio-form{
+    
+    margin: 20% auto;
+    width: 65%
+
+}
+
+.logo{
+    
+position: absolute;
+  top: 25%; 
+  left: 48%;
+  transform: translate(-50%, -50%);
+    
+}
+
+body{
+    
+    background-color: #E1F5FE;
+
+}

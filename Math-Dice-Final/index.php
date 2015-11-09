@@ -3,68 +3,69 @@
         <title>Math Dice</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/dado.css">
+        <link rel="stylesheet" href="css/inicio.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
      
     </head>
     <body>
         
-        <div class="row">
-            
-        </div>
+        <img class="logo" src="img/MathDice.png"></img>
         
-        <form class="form-horizontal">
-            <fieldset>
+        <div class="inicio-form">
+        
+            <form class="form-horizontal">
+                <fieldset>
+                    
+                <!-- Introducir nombre-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="name">Nombre</label>  
+                  <div class="col-md-4">
+                  <input id="name" name="name" type="text" placeholder="Introduzca su nombre" class="form-control input-md" required="">
+                    
+                 </div>
+                </div>
                 
-            <!-- Introducir nombre-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="name">Nombre</label>  
-              <div class="col-md-4">
-              <input id="name" name="name" type="text" placeholder="Introduzca su nombre" class="form-control input-md" required="">
+                <!-- Introducir apellidos-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="apellidos">Apellidos</label>  
+                  <div class="col-md-4">
+                  <input id="apellidos" name="apellidos" type="text" placeholder="Introduzca sus apellidos" class="form-control input-md" required="">
+                    
+                  </div>
+                </div>
                 
-             </div>
-            </div>
-            
-            <!-- Introducir apellidos-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="apellidos">Apellidos</label>  
-              <div class="col-md-4">
-              <input id="apellidos" name="apellidos" type="text" placeholder="Introduzca sus apellidos" class="form-control input-md" required="">
+                <!-- Introducir Edad-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="edad">Edad</label>  
+                  <div class="col-md-4">
+                  <input id="edad" name="edad" type="text" placeholder="Introduzca su edad" class="form-control input-md" required="">
+                    
+                  </div>
+                </div>
                 
-              </div>
-            </div>
-            
-            <!-- Introducir Edad-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="edad">Edad</label>  
-              <div class="col-md-4">
-              <input id="edad" name="edad" type="text" placeholder="Introduzca su edad" class="form-control input-md" required="">
+                <!-- Modo de juego -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="tipoJuego">Tipo de juego</label>
+                  <div class="col-md-4">
+                    <select id="tipoJuego" name="tipoJuego" class="form-control">
+                      <option value="junior">Junior</option>
+                      <option value="junior+">Junior+</option>
+                    </select>
+                  </div>
+                </div>
                 
-              </div>
-            </div>
-            
-            <!-- Modo de juego -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="tipoJuego">Tipo de juego</label>
-              <div class="col-md-4">
-                <select id="tipoJuego" name="tipoJuego" class="form-control">
-                  <option value="junior">Junior</option>
-                  <option value="junior+">Junior+</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Submit -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="submit"></label>
-              <div class="col-md-4">
-                <button id="submit" name="submit" class="btn btn-primary">¡Jugar!</button>
-              </div>
-            </div>
-            
-            </fieldset>
-        </form>
+                <!-- Submit -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="submit"></label>
+                  <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-primary">¡Jugar!</button>
+                  </div>
+                </div>
+                
+                </fieldset>
+            </form>
+        </div>
         
     </body>    
 </html>

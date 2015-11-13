@@ -4,44 +4,56 @@ class Jugador{
     
     //CONSTRUCTOR
     
-    function Jugador($nombre, $apellidos, $edad){
+    private $nombre;
+    private $apellidos;
+    private $edad;
+    
+    public function Jugador($nombre, $apellidos, $edad, $tipo){
         
-        $this->$nombre = $nombre;
-        $this->$apellidos = $apellidos;
-        $this->$edad = $edad;
+        $this->nombre = $nombre;
+         $this->apellidos = $apellidos;
+         $this->edad = $edad;
+         $this->tipo = $tipo;
         
     }
     
     //GETTERS
     
-    function getNombre(){
-        return $this->$nombre;
+    public function getNombre(){
+        return $this->nombre;
     }
     
-    function getApellidos(){
-        return $this->$apellidos;
+    public function getApellidos(){
+        return $this->apellidos;
     }
     
-    function getEdad(){
-        return $this->$edad;
+    public function getEdad(){
+        return $this->edad;
+    }
+    
+    public function getTipo(){
+        return $this->tipo;
     }
     
     //SETTERS
     
-    function setNombre($nombre){
-        $this->$nombre = $nombre;
+    public function setNombre($nombre1){
+        $nombre = $nombre1;
     }
     
-    function setApellidos($apellidos){
-        $this->$apellidos = $apellidos;
+    public function setApellidos($apellidos1){
+        $apellidos = $apellidos1;
     }
     
-    function setEdad($edad){
-        $this->$edad = $edad;
+    public function setEdad($edad1){
+        $edad = $edad1;
+    }
+    
+    public function setTipo($tipo1){
+        $tipo = $tipo;
     }
     
     //FUNCIONES
-    
     
 }
 

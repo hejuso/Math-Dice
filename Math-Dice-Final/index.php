@@ -1,3 +1,16 @@
+<?php
+//Se borran las cookies
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+            $params["path"], $params["domain"],
+            $params["secure"], $params["httponly"]
+        );
+    }
+    if(isset($_SESSION)){
+      session_destroy();
+    }
+?>
 <html>
     <head>
         <title>Math Dice</title>
@@ -6,22 +19,24 @@
         <link rel="stylesheet" href="css/inicio.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-     
+
     </head>
     <body>
         
+
         <img class="logo" src="img/MathDice.png"></img>
-        
+
         <div class="inicio-form">
         
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="juego.php" method="post">
+              
                 <fieldset>
-                    
+                <input type="hidden" name="jugador">
                 <!-- Introducir nombre-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="name">Nombre</label>  
+                  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
                   <div class="col-md-4">
-                  <input id="name" name="name" type="text" placeholder="Introduzca su nombre" class="form-control input-md" required="">
+                  <input id="nombre" name="nombre" type="text" placeholder="Introduzca su nombre" class="form-control input-md" required="*">
                     
                  </div>
                 </div>

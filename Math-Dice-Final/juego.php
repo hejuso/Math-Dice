@@ -4,23 +4,44 @@ include 'conf.php';
     
     //Dados
 include 'dado.php';
+
+//Incluimos la clase Jugador
+include('lib/Jugador.php');
+
+//Iniciamos la session
+
+session_start();
+
+//Se crea el objeto jugador
+
+if(isset($_POST['jugador'])){
+        //Comprobamos un objeto creado en la sesion
+        if (!isset($_SESSION['jugador'])) {
+          $jugador1 = new Jugador($_POST['nombre'],$_POST['apellidos'],$_POST['edad'],$_POST['tipoJuego']);
+          //Inicializamos al jugador
+          $_SESSION['jugador'] = $jugador1;
+        }
+    }
+
 ?>
 <html>
     <head>
         <title>Math Dice</title>
         <meta charset="UTF-8">
+        
  <!-- Bootstrap -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/dado.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
- 
+
     </head>
     <body>
 
         <?php
-        include "lib/menu.php"
+        include "lib/menu.php";
+        include "lib/menuUsuario.php";
         ?>
   
         <!-- Formulario en el que se comprueba el valor del dado con el del campo de texto -->
@@ -68,7 +89,6 @@ include 'dado.php';
                     
                 </form>
         </div>
-  
         
     </body>
 </html>

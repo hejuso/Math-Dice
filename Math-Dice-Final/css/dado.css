@@ -16,3 +16,32 @@
     position: absolute;
     top: -9999px;
 }
+
+body {
+    
+    background-color: #E1F5FE;
+
+}
+
+.glyphicon {
+    
+    margin-bottom: 10px;margin-right: 10px;
+    
+}
+
+small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+}
+
+.infoUsu{
+    position: absolute;
+    left: 60%;
+}
+
+.prueba{
+    
+    width: 65%;
+    
+}

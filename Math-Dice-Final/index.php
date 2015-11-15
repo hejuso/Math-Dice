@@ -7,7 +7,11 @@
             $params["secure"], $params["httponly"]
         );
     }
+    
+    
+    
     if(isset($_SESSION)){
+      
       session_destroy();
     }
 ?>

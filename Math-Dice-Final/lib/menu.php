@@ -46,7 +46,7 @@ $menu=array(
             </div>
             <div>
               <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php"><?php echo $menu['portada'][$lang]?></a></li>
+                <li class="active"><a href="juego.php"><?php echo $menu['portada'][$lang]?></a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $menu['tiposJuego'][$lang]?> <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <?php // Foreach anidado para generar el submenú

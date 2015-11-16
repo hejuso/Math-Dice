@@ -3,7 +3,8 @@
 
     //Dados
 include 'lib/dado.php';
-include 'lib/Jugador.php';
+
+include('auth.php');
 ?>
 <html>
     <head>

@@ -2,6 +2,8 @@
 
     class Juego{
         
+        
+        
         public function Juego(){
             
             

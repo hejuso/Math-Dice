@@ -41,7 +41,7 @@
                   <label class="col-md-4 control-label" for="nombre">Nombre</label>  
                   <div class="col-md-4">
                   <input id="nombre" name="nombre" type="text" placeholder="Introduzca su nombre" class="form-control input-md" required="*">
-                    
+
                  </div>
                 </div>
                 

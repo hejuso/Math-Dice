@@ -3,22 +3,8 @@
 include 'lib/dado.php';
 
 //Incluimos la clase Jugador
-include('lib/Jugador.php');
 
-//Iniciamos la session
-
-session_start();
-
-//Se crea el objeto jugador
-
-if(isset($_POST['jugador'])){
-        //Comprobamos un objeto creado en la sesion
-        if (!isset($_SESSION['jugador'])) {
-          $jugador1 = new Jugador($_POST['nombre'],$_POST['apellidos'],$_POST['edad'],$_POST['tipoJuego']);
-          //Inicializamos al jugador
-          $_SESSION['jugador'] = $jugador1;
-        }
-    }
+include('auth.php');
 
 ?>
 <html>
@@ -54,12 +40,19 @@ if(isset($_POST['jugador'])){
                     
                     <div class="container-fluid">
                         <div class="row">
-                            <div class='col-xs-5'>
+                            <div class='col-xs-7'>
                             
                             <?php 
                                 //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
+
                                 dadoAleatorio(1);
                                 dadoAleatorio(2);
+                                dadoAleatorio(3);
+                                    
+                                dadoDe3Aleatorio(1);
+                                dadoDe3Aleatorio(2);
+                                
+                                dadoDodecaedro(1);
                             ?>
                             
                             </div>
@@ -83,8 +76,6 @@ if(isset($_POST['jugador'])){
                             </div>
                         </div>    
                     </div>
-
-                    
                 </form>
         </div>
         

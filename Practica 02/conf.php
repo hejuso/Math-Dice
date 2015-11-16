@@ -1,6 +1,16 @@
 <?php
     //Array multilenguaje
-$lang="sp";
+if(isset($_GET['lang']) && strlen($_GET['lang'])>0){
+    
+    if($_GET['lang'] == 'sp' || $_GET['lang'] == 'en'){
+        $lang = $_GET['lang'];
+    }else{
+        $lang = 'sp';
+    }
+}else{
+    $lang = 'sp';
+}
+
 $menu=array(
     "titulo"=>array(
         "sp"=>"Math Dice",

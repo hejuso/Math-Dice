@@ -49,7 +49,7 @@ include 'dado.php';
             </div>
           </div>
         </nav>
-        
+
   
         <!-- Formulario en el que se comprueba el valor del dado con el del campo de texto -->
         

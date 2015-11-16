@@ -1,6 +1,7 @@
 .infoUsu{
-    position: absolute;
-    left: 74%;
+    
+    position: fixed;
+    left: 73%;
     width: 80%;
 
 }

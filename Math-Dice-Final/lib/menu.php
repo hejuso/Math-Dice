@@ -16,17 +16,13 @@ $menu=array(
         "en"=>"Game modes",
         "submenu"=>array(
             "tipo1"=>array(
-                "sp"=>"Juego estándar",
-                "en"=>"Standard Game"
+                "sp"=>"Junior",
+                "en"=>"Junior"
                 ),
             "tipo2"=>array(
-                "sp"=>"Juego dificil",
-                "en"=>"Hard Game"
+                "sp"=>"Junior +",
+                "en"=>"Junior +"
                 ),
-            "tipo3"=>array(
-            "sp"=>"Juego personalizado",
-            "en"=>"Custom Game"
-            ),
             )
         ),
     "instrucciones"=>array(

@@ -1,15 +1,21 @@
 <?php
 
-    class Juego{
+class Juego{
+    
+    private $numero = "";
+    private $numeroEspera = "";
+    
+    function getNum($num){
         
         
-        
-        public function Juego(){
-            
-            
-            
-        }
         
     }
+        
+    function juego(){
+    
+        
+        
+    }
+}
 
 ?>

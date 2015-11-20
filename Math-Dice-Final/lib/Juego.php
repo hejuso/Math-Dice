@@ -1,13 +1,12 @@
 <?php
+    $puntos = 0;
 
-class Juego{
-    
-    private $puntos = 0;
-    
-    
-    function mathDice(){
+    function mathDice($valorEval,$dadoDode){
+        echo '<br>';
         
-        
+        echo 'Resultado de la var Eval: ';
+        eval("echo $valorEval;");
+
         
     }
     
@@ -16,7 +15,5 @@ class Juego{
         $this->puntos += 10;
         
     }
-
-}
 
 ?>

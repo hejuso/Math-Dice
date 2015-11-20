@@ -11,15 +11,15 @@ $(document).ready(function(){
             //Añadimos en la parte derecha  un dado con el mismo valor
             //fichero jugar.php --> <div class="items" id="jugada">
             $("#jugada" ).append( "<img src='img/dado"+value+"_3.png' width='100px'>" );
-            console.log(value);
             //Desactivamos el click sobre ese elemento
             $(this).off("click");
             //Cambiamos esa imagen a gris
             $(this).attr("src","img/dadogris.png");
             //Cambiamos el valor dentro del campo hidden del formulario
             //fichero jugar.php --> <input type="hidden" name="dado1" value=""/>
-            var dadoId="input[name='dado"+contador+"']";
+            var dadoId="input[name='dadoTirada"+contador+"']";
             $(dadoId).val(value);
+            console.log(value);
             //Si ya hemos colocaddo dos dados (una operación al menos) activamos el boton de calcular
             if(contador==2){
                 $("#btn-jugada" ).append( "<button type='submit' class='input-md btn btn-lg btn-primary boton'>Math Dice!</button>" );
@@ -29,6 +29,8 @@ $(document).ready(function(){
             if(contador<=5){
                 realizarOperacion=true;
             }
+            console.log(value);
+
         }
     });
 //Callback click sobre clase dado6 que son las imagenes de los dados de hasta 6
@@ -39,8 +41,9 @@ $(document).ready(function(){
             $("#jugada" ).append( "<img src='img/dado"+value+".png' width='100px'>" );
             $(this).off("click");
             $(this).attr("src","img/dadogris.png");
-            var dadoId="input[name='dado"+contador+"']";
+            var dadoId="input[name='dadoTirada"+contador+"']";
             $(dadoId).val(value);
+            console.log(value);
             if(contador==2){
                 $("#btn-jugada" ).append( "<button type='submit' class='input-md btn btn-lg btn-primary boton'>Math Dice!</button>" );
             }
@@ -49,6 +52,8 @@ $(document).ready(function(){
             if(contador<=5){
                 realizarOperacion=true;
             }
+            console.log(value);
+
         }
     });
 });

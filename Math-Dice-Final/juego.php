@@ -47,17 +47,31 @@ include('auth.php');
                         dadoDodecaedro(1);
                         
                     ?>
-<div>
+
                 <h2>Elige símbolos:</h1>
 
                 <div class="simbolos">
-                    <img class="operacion" src="img/mas.png" width='100px'></img>
-                    <img class="operacion" src="img/menos.png" width='100px'></img>
+                    <img class="operacion" src="img/mas.png" name="operacion" value="+" width='100px'></img>
+                    <img class="operacion" src="img/menos.png" value="-" width='100px'></img>
+                    <input type="hidden" name="operacion1" value=""/>
+                    <input type="hidden" name="operacion2" value=""/>
+                    <input type="hidden" name="operacion3" value=""/>
+                    <input type="hidden" name="operacion4" value=""/>
                 </div>
-</div>
+                
+
+
                 <br>
                 <h2>Selección</h3>
-                <div id="jugada"></div>
+                <div id="jugada">
+                    
+                <input type="hidden" name="dadoTirada1" value=""/>
+                <input type="hidden" name="dadoTirada2" value=""/>
+                <input type="hidden" name="dadoTirada3" value=""/>
+                <input type="hidden" name="dadoTirada4" value=""/>
+                <input type="hidden" name="dadoTirada5" value=""/>
+                    
+                </div>
                 <div id="btn-jugada"></div>
                 
             </form>

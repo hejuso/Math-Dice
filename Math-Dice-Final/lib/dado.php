@@ -11,7 +11,7 @@
             
         echo '<img class="dado6" value="'.$numAleatorioMas1.'" src="img/'.$arr1[$numAleatorio].'"></img>';
        
-        echo '<input type="hidden" name="dado'.$num.'" value="'.$numAleatorioMas1.'">';
+        //echo '<input type="hidden" name="dado'.$num.'" value="'.$numAleatorioMas1.'">';
         
     }
     
@@ -26,7 +26,7 @@
             
         echo '<img class="dado3" value="'.$numAleatorioMas1.'" src="img/'.$arr1[$numAleatorio].'"></img>';
        
-        echo '<input type="hidden" name="dado'.$num.'" value="'.$numAleatorioMas1.'">';
+        //echo '<input type="hidden" name="dado'.$num.'_3" value="'.$numAleatorioMas1.'">';
         
     }
     

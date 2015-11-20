@@ -11,6 +11,7 @@ $(document).ready(function(){
             //Añadimos en la parte derecha  un dado con el mismo valor
             //fichero jugar.php --> <div class="items" id="jugada">
             $("#jugada" ).append( "<img src='img/dado"+value+"_3.png' width='100px'>" );
+            console.log(value);
             //Desactivamos el click sobre ese elemento
             $(this).off("click");
             //Cambiamos esa imagen a gris
@@ -21,7 +22,7 @@ $(document).ready(function(){
             $(dadoId).val(value);
             //Si ya hemos colocaddo dos dados (una operación al menos) activamos el boton de calcular
             if(contador==2){
-                $("#btn-jugada" ).append( "<input class='btn btn-success btn-lg btn-block' type='submit' name='calcular' value='MathDice'/>" );
+                $("#btn-jugada" ).append( "<button type='submit' class='input-md btn btn-lg btn-primary boton'>Math Dice!</button>" );
             }
             contador++;
             //Activamos seemaforo poder realizar operacion
@@ -35,13 +36,13 @@ $(document).ready(function(){
     $('.dado6').click(function(){
         if(realizarOperacion==false){
             var value=$(this).attr("value");
-            $("#jugada" ).append( "<img src='img/dado"+value+"_6.png' width='100px'>" );
+            $("#jugada" ).append( "<img src='img/dado"+value+".png' width='100px'>" );
             $(this).off("click");
             $(this).attr("src","img/dadogris.png");
             var dadoId="input[name='dado"+contador+"']";
             $(dadoId).val(value);
             if(contador==2){
-                $("#btn-jugada" ).append( "<input class='btn btn-success btn-lg btn-block' type='submit' name='calcular' value='MathDice'/>" );
+                $("#btn-jugada" ).append( "<button type='submit' class='input-md btn btn-lg btn-primary boton'>Math Dice!</button>" );
             }
             contador++;
             realizarOperacion=true;

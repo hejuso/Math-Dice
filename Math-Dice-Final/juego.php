@@ -19,57 +19,50 @@ include('auth.php');
         include "lib/menu.php";
         include "lib/menuUsuario.php";
         ?>
-  
+
         <!-- Formulario en el que se comprueba el valor del dado con el del campo de texto -->
-        
+        <!--
         <div class='container'>
+-->
+            <form role="form" action="resultado.php" method="post">
+              
 
-                <form role="form" action="resultado.php" method="post">
-                  
-                    <div class="row">
-                        <div class='col-xs-12'><h1>Dado aleatorio:</h1></div>
-                    </div>
+                   <h2>Elige dados:</h1>
+
+
+                    <?php
+                        //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
+
+                        dadoAleatorio(1);
+                        dadoAleatorio(2);
+                        dadoAleatorio(3);
+                        
+                    ?><br><br><?php
                     
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class='col-xs-7'>
-                            
-                            <?php 
-                                //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
+                        dadoDe3Aleatorio(1);
+                        dadoDe3Aleatorio(2);
+                        
+                    ?><br><br><?php
+                    
+                        dadoDodecaedro(1);
+                        
+                    ?>
+<div>
+                <h2>Elige símbolos:</h1>
 
-                                dadoAleatorio(1);
-                                dadoAleatorio(2);
-                                dadoAleatorio(3);
-                                    
-                                dadoDe3Aleatorio(1);
-                                dadoDe3Aleatorio(2);
-                                
-                                dadoDodecaedro(1);
-                            ?>
-                            
-                            </div>
-                            <div class='col-xs-3'>
-                            <div class="form-group">
-                                <label for="text">Dado 1</label>
-                                <input type="text" class="form-control" name="num1" id="text">
-                            </div>
-                      
-                            <div class="radio">
-                                <label><input type="radio" name="signo" checked value="+"> + </label><br>
-                                <label><input type="radio" name="signo" value="-"> - </label>
-                            </div>
-                      
-                            <div class="form-group">
-                                <label for="text">Dado 2</label>
-                                <input type="text" name="num2" class="form-control">
-                            </div>
-                            
-                            <button type="submit" class="btn btn-default">Enviar</button>
-                            </div>
-                        </div>    
-                    </div>
-                </form>
+                <div class="simbolos">
+                    <img class="operacion" src="img/mas.png" width='100px'></img>
+                    <img class="operacion" src="img/menos.png" width='100px'></img>
+                </div>
+</div>
+                <br>
+                <h2>Selección</h3>
+                <div id="jugada"></div>
+                <div id="btn-jugada"></div>
+                
+            </form>
         </div>
-        
+
+<script type="text/javascript" src="js/query.js"></script>
     </body>
 </html>

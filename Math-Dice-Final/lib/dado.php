@@ -9,7 +9,7 @@
         $numAleatorio = rand(0,5);
         $numAleatorioMas1 = $numAleatorio+1;
             
-        echo '<div class="col-xs-2"><img class="dado" src="img/'.$arr1[$numAleatorio].'"></img></div>';
+        echo '<img class="dado6" value="'.$numAleatorioMas1.'" src="img/'.$arr1[$numAleatorio].'"></img>';
        
         echo '<input type="hidden" name="dado'.$num.'" value="'.$numAleatorioMas1.'">';
         
@@ -19,12 +19,12 @@
         
         //Necesito algo para no tener que repetir arrays.
         
-        $arr1=array('dado1.png','dado2.png','dado3.png');
+        $arr1=array('dado1_3.png','dado2_3.png','dado3_3.png');
         
         $numAleatorio = rand(0,2);
         $numAleatorioMas1 = $numAleatorio+1;
             
-        echo '<div class="col-xs-2"><img class="dado" src="img/'.$arr1[$numAleatorio].'"></img></div>';
+        echo '<img class="dado3" value="'.$numAleatorioMas1.'" src="img/'.$arr1[$numAleatorio].'"></img>';
        
         echo '<input type="hidden" name="dado'.$num.'" value="'.$numAleatorioMas1.'">';
         
@@ -39,7 +39,7 @@
         $numAleatorio = rand(0,11);
         $numAleatorioMas1 = $numAleatorio+1;
             
-        echo '<div class="col-xs-3"><img class="dado" src="img/'.$arr1[$numAleatorio].'"></img></div>';
+        echo '<img class="dado12" value="'.$numAleatorioMas1.'" src="img/'.$arr1[$numAleatorio].'"></img>';
        
         echo '<input type="hidden" name="dodecaedro'.$num.'" value="'.$numAleatorioMas1.'">';
         

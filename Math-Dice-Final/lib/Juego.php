@@ -2,20 +2,21 @@
 
 class Juego{
     
-    private $numero = "";
-    private $numeroEspera = "";
+    private $puntos = 0;
     
-    function getNum($num){
+    
+    function mathDice(){
         
         
         
     }
-        
-    function juego(){
     
+    function ganaPuntos(){
         
+        $this->puntos += 10;
         
     }
+
 }
 
 ?>

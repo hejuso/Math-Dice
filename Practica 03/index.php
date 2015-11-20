@@ -75,7 +75,7 @@ include 'dado.php';
                             <div class='col-xs-3'>
                             <div class="form-group">
                                 <label for="text">Dado 1</label>
-                                <input type="text" class="form-control" name="num1" id="text">
+                                <input type="text" class="form-control" name="num1" id="text" required="">
                             </div>
                       
                             <div class="radio">
@@ -85,7 +85,7 @@ include 'dado.php';
                       
                             <div class="form-group">
                                 <label for="text">Dado 2</label>
-                                <input type="text" name="num2" class="form-control">
+                                <input type="text" name="num2" class="form-control" required="">
                             </div>
                             
                             <button type="submit" class="btn btn-default">Enviar</button>

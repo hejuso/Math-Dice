@@ -23,7 +23,7 @@ include('auth.php');
 
     //Comprobación y suma/resta de el numero introducido con el numero de los dados.
     
-    echo compSumaDado($_POST['dado1'], $_POST['dado2'], $_POST['num1'], $_POST['signo'], $_POST['num2']);
+        echo compSumaDado($_POST['dado1'], $_POST['dado2'], $_POST['num1'], $_POST['signo'], $_POST['num2']);
     
     ?>
     

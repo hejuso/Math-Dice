@@ -1,8 +1,36 @@
-.dado {
+.dado6 {
     height: auto; 
     width: auto; 
     max-width: 100px; 
     max-height: 100px;
+    display:inline-block;
+    margin-right:20px;
+
+}
+
+.dado3 {
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    max-height: 100px;
+    display:inline-block;
+    margin-right:20px;
+}
+
+.dado12 {
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    max-height: 100px;
+    display:inline-block;
+}
+
+.boton{
+    width:125px;
+    height:55px;
+    position: absolute;
+    top:89%;
+    left:40%;
 }
 
 .tirarDado {

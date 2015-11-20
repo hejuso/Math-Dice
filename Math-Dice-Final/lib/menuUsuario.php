@@ -14,9 +14,10 @@
                                     <br />
                                     
                                     Tipo de juego: <?php echo " ".$jugador1->getTipo(); ?>
-                                    <br /><br />
+                                    <br />
                                     Edad: <?php echo " ".$jugador1->getEdad(); ?>
-                                    <br /> <br />
+                                    <br />
+                                    Puntos: <br><br>
                                 <!-- Botón -->
                                 <button type="button" class="btn btn-danger" onclick="window.location.href='index.php'">Cerrar sesión</button>
                                 </div>

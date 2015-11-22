@@ -17,10 +17,9 @@
                                     <br />
                                     Edad: <?php echo " ".$jugador1->getEdad(); ?>
                                     <br />
-                                    Puntos: <br><br>
+                                    Puntos: <?php echo " ".$_SESSION['jugador']->getPuntos(); ?><br><br>
                                 <!-- Botón -->
                                 <button type="button" class="btn btn-danger" onclick="window.location.href='index.php'">Cerrar sesión</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -28,3 +27,4 @@
             </div>
         </div>
     </div>
+</div>

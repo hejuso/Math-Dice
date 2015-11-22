@@ -9,9 +9,11 @@ include('auth.php');
 ?>
 <html>
 
-<?php
-    include("lib/header.php");
-?>
+<head>
+        <?php
+            include("lib/header.php");
+        ?>
+</head>
 
     <body>
 
@@ -26,7 +28,8 @@ include('auth.php');
 -->
             <form role="form" action="resultado.php" method="post">
               
-
+                <div class="eligeDados">
+                    
                    <h2>Elige dados:</h1>
 
 
@@ -47,30 +50,50 @@ include('auth.php');
                         dadoDodecaedro(1);
                         
                     ?>
-
-                <h2>Elige símbolos:</h1>
-
-                <div class="simbolos">
-                    <img class="operacion" src="img/mas.png" name="operacion" value="+" width='100px'></img>
-                    <img class="operacion" src="img/menos.png" value="-" width='100px'></img>
-                    <input type="hidden" name="operacion1" value=""/>
-                    <input type="hidden" name="operacion2" value=""/>
-                    <input type="hidden" name="operacion3" value=""/>
-                    <input type="hidden" name="operacion4" value=""/>
+                
                 </div>
                 
+                <div class="eligeSimbolo">
+                
+                    <h2>Elige símbolos:</h1>
 
+                    <div class="simbolos">
+                        
+                        <?php if($jugador1->getTipo() == "junior+"){ ?>
+                            <img class="operacion" src="img/mas.png" name="operacion" value="+" width='100px'></img>
+                            <img class="operacion" src="img/menos.png" value="-" width='100px'></img>
+                            <img class="operacion" src="img/division.png" value="/" width='100px'></img>
+                            <img class="operacion" src="img/multiplicacion.png" value="*" width='100px'></img>
+                            <input type="hidden" name="operacion1" value=""/>
+                            <input type="hidden" name="operacion2" value=""/>
+                            <input type="hidden" name="operacion3" value=""/>
+                            <input type="hidden" name="operacion4" value=""/>
+                        <?php }else{ ?>
+                            <img class="operacion" src="img/mas.png" name="operacion" value="+" width='100px'></img>
+                            <img class="operacion" src="img/menos.png" value="-" width='100px'></img>
+                            <input type="hidden" name="operacion1" value=""/>
+                            <input type="hidden" name="operacion2" value=""/>
+                            <input type="hidden" name="operacion3" value=""/>
+                            <input type="hidden" name="operacion4" value=""/>
+                        <?php } ?>
+                    </div>
+                
+                </div>
 
                 <br>
-                <h2>Selección</h3>
-                <div id="jugada">
-                    
-                <input type="hidden" name="dadoTirada1" value=""/>
-                <input type="hidden" name="dadoTirada2" value=""/>
-                <input type="hidden" name="dadoTirada3" value=""/>
-                <input type="hidden" name="dadoTirada4" value=""/>
-                <input type="hidden" name="dadoTirada5" value=""/>
-                    
+                
+                <div class="seleccion">
+                
+                    <h2>Selección</h3>
+                    <div id="jugada">
+                        
+                        <input type="hidden" name="dadoTirada1" value=""/>
+                        <input type="hidden" name="dadoTirada2" value=""/>
+                        <input type="hidden" name="dadoTirada3" value=""/>
+                        <input type="hidden" name="dadoTirada4" value=""/>
+                        <input type="hidden" name="dadoTirada5" value=""/>
+                        
+                    </div>
                 </div>
                 <div id="btn-jugada"></div>
                 

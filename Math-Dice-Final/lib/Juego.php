@@ -1,19 +1,36 @@
 <?php
-    $puntos = 0;
+
+include('auth.php');
 
     function mathDice($valorEval,$dadoDode){
-        echo '<br>';
+
+        ob_start();//Abrimos el búfer para almacenar todo lo que devuelva el eval
         
-        echo 'Resultado de la var Eval: ';
         eval("echo $valorEval;");
+            
+        $valor = ob_get_contents();
+        
+        ob_end_clean();//Lo cerramos
+        
+        if ($valor == $dadoDode){
+            
+            ganaPuntos();
+            echo '<h1>¡Correcto!, ahora tienes '.$_SESSION['jugador']->getPuntos().' puntos</h1>';
+            
+            
+        }else{
+            
+            echo '<h1>Incorrecto!</h1>';
+
+        }
 
         
     }
     
     function ganaPuntos(){
         
-        $this->puntos += 10;
+        $_SESSION['jugador']->setPuntos($_SESSION['jugador']->getPuntos() + 10);
         
     }
-
+    
 ?>

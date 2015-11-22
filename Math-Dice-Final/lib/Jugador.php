@@ -7,14 +7,15 @@ class Jugador{
     private $nombre;
     private $apellidos;
     private $edad;
+    private $puntos;
     
     public function Jugador($nombre, $apellidos, $edad, $tipo){
         
         $this->nombre = $nombre;
-         $this->apellidos = $apellidos;
-         $this->edad = $edad;
-         $this->tipo = $tipo;
-        
+        $this->apellidos = $apellidos;
+        $this->edad = $edad;
+        $this->tipo = $tipo;
+        $this->puntos = 0;
     }
     
     //GETTERS
@@ -35,6 +36,10 @@ class Jugador{
         return $this->tipo;
     }
     
+    public function getPuntos(){
+        return $this->puntos;
+    }
+    
     //SETTERS
     
     public function setNombre($nombre1){
@@ -53,7 +58,12 @@ class Jugador{
         $tipo = $tipo;
     }
     
+    public function setPuntos($puntos){
+        $this->puntos = $puntos;
+    }
+    
     //FUNCIONES
+    
     
 }
 

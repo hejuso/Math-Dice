@@ -33,6 +33,28 @@
     left:40%;
 }
 
+.eligeDados{
+    
+    float:left;
+    margin-left:175px;
+    
+}
+
+.eligeSimbolo{
+    
+    float:left;
+    margin-left:175px;
+    
+}
+
+.seleccion{
+    
+    float:left;
+    margin-left:20%;
+    clear:both;
+    
+}
+
 .tirarDado {
     
     border: 35px solid #fff;
@@ -63,3 +85,22 @@ small {
     color: #999;
 }
 
+.input-group-addon
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+
+.superponer2{
+    position: absolute;
+    left: 14%;
+    top: 105px;
+    z-index: 1;
+    opacity:0.90;
+}
+.superponer1{
+
+    z-index: 0;
+    
+}

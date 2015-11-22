@@ -104,3 +104,17 @@ small {
     z-index: 0;
     
 }
+
+.idioma{
+    position:absolute;
+    top:10px;
+    right:3%;
+}
+
+.btn-group-info .dropdown-menu {
+  background-color: #4ebbdb !important;
+}
+.btn-group-info .dropdown-menu li > a:hover,
+.btn-group-info .dropdown-menu li > a:focus {
+  background-color: #5bc0de !important;
+}

@@ -12,9 +12,23 @@ include('lib/Juego.php');
             include("lib/header.php");
             include 'lib/menu.php';
         ?>
+        
     </head>
     <body>
-        
+        <div class="idioma">
+            <form method="get"action="resultado.php">    
+                <div class="btn-group btn-group-primary">
+                  <button class="btn btn-primary btn-md" type="button"><?php if($_GET['lang'] == 'en'){echo 'English';}else{echo 'Español';} ?></button>
+                  <button data-toggle="dropdown" class="btn btn-primary btn-md dropdown-toggle" type="button">
+                	  <span class="caret"></span></button>
+                	  
+                  <ul class="dropdown-menu">
+                	  <li><input class="btn btn-sm btn-default" type="submit" name="lang" value="sp"></a></li>
+                	  <li><input class="btn btn-sm btn-default" type="submit" name="lang" value="en"></a></li>
+                  </ul>
+                </div>
+            </form>
+        </div>
         <?php
         
         include "lib/menuUsuario.php";

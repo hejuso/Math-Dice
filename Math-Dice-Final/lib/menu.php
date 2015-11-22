@@ -1,7 +1,19 @@
 
 <?php
 
-$lang="sp";
+$lang=$_GET['lang'];
+
+if(isset($_GET['lang']) && strlen($_GET['lang'])>0){
+    
+    if($_GET['lang'] == 'sp' || $_GET['lang'] == 'en'){
+        $lang = $_GET['lang'];
+    }else{
+        $lang = 'sp';
+    }
+}else{
+    $lang = 'sp';
+}
+
 $menu=array(
     "titulo"=>array(
         "sp"=>"Math Dice",
@@ -35,33 +47,34 @@ $menu=array(
         ),
     );
 ?>
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="index.php"><?php echo $menu['titulo'][$lang]?> </a>
-            </div>
-            <div>
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="juego.php"><?php echo $menu['portada'][$lang]?></a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $menu['tiposJuego'][$lang]?> <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <?php // Foreach anidado para generar el submenú
-                    foreach( $menu['tiposJuego'] as $clave => $valor ){
-                        
-                        //If para comprobar si es un submenú (probablemente se puede prescindir de el)
-                        if($clave == 'submenu'){
-                            
-                            //Con este foreach insertamos el array anteriormente recorrido en unas nuevas listas ordenadas
-                        foreach ($valor as $tiposJu){ ?>
-                            <li><a href="#"><?php echo $tiposJu[$lang] ?></a></li>
-                    <?php } ?>
-                    <?php }
-                    }?>
-                  </ul>
-                </li>
-                <li><a href="instrucciones.php"><?php echo $menu['instrucciones'][$lang]?></a></li>
-                <li><a href="acercaDe.php"><?php echo $menu['acercaDe'][$lang]?></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.php"><?php echo $menu['titulo'][$lang]?> </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="juego.php"><?php echo $menu['portada'][$lang]?></a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $menu['tiposJuego'][$lang]?> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <?php // Foreach anidado para generar el submenú
+            foreach( $menu['tiposJuego'] as $clave => $valor ){
+                
+                //If para comprobar si es un submenú (probablemente se puede prescindir de el)
+                if($clave == 'submenu'){
+                    
+                    //Con este foreach insertamos el array anteriormente recorrido en unas nuevas listas ordenadas
+                foreach ($valor as $tiposJu){ ?>
+                    <li><a href="#"><?php echo $tiposJu[$lang] ?></a></li>
+            <?php } ?>
+            <?php }
+            }?>
+          </ul>
+        </li>
+        <li><a href="instrucciones.php"><?php echo $menu['instrucciones'][$lang]?></a></li>
+        <li><a href="acercaDe.php"><?php echo $menu['acercaDe'][$lang]?></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

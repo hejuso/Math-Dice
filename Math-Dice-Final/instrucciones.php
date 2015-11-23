@@ -22,7 +22,7 @@ include('auth.php');
     
     	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
     		<div class="product-chooser-item selected">
-    			<img src="http://renswijnmalen.nl/bootstrap/desktop_mobile.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Mobile and Desktop">
+    			<img src="img/signos.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Mobile and Desktop">
                 <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
     				<?php if($jugador1->getLang() == 'sp'){ ?>
     				    <span class="title">Calcula</span>
@@ -42,7 +42,7 @@ include('auth.php');
     	
     	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
     		<div class="product-chooser-item">
-    			<img src="http://renswijnmalen.nl/bootstrap/desktop.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Desktop">
+    			<img src="img/dadosInstrucciones.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Desktop">
                 <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
     				<?php if($jugador1->getLang() == 'sp'){ ?>
     				    <span class="title">Selecciona</span>
@@ -63,7 +63,7 @@ include('auth.php');
     	
     	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
     		<div class="product-chooser-item">
-    			<img src="http://renswijnmalen.nl/bootstrap/mobile.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Mobile">
+    			<img src="img/misdies.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Mobile">
                 <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
     				<?php if($jugador1->getLang() == 'sp'){ ?>
     				    <span class="title">Resultado</span>

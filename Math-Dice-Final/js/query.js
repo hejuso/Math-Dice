@@ -30,7 +30,6 @@ $(document).ready(function(){
                 realizarOperacion=true;
             }
             console.log(value);
-
         }
     });
 //Callback click sobre clase dado6 que son las imagenes de los dados de hasta 6
@@ -74,4 +73,13 @@ $(document).ready(function(){
             }
         }
     });
+});
+
+$(function(){
+	$('div.product-chooser').not('.disabled').find('div.product-chooser-item').on('click', function(){
+		$(this).parent().parent().find('div.product-chooser-item').removeClass('selected');
+		$(this).addClass('selected');
+		$(this).find('input[type="radio"]').prop("checked", true);
+		
+	});
 });

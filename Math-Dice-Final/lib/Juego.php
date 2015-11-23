@@ -15,12 +15,23 @@ include('auth.php');
         if ($valor == $dadoDode){
             
             ganaPuntos();
-            echo '<h1>¡Correcto!, ahora tienes '.$_SESSION['jugador']->getPuntos().' puntos</h1>';
+           
+            if($_SESSION['jugador']->getLang() == 'sp'){
+                
+                echo '<h1>¡Correcto! <br> Puntos: '.$_SESSION['jugador']->getPuntos().'</h1>';
+
+            }else{
+                echo '<h1>¡You won! <br> Points: '.$_SESSION['jugador']->getPuntos().'</h1>';
+            }
             
             
         }else{
             
-            echo '<h1>Incorrecto!</h1>';
+            if($_SESSION['jugador']->getLang() == 'sp'){
+                echo '<h1>Incorrecto!</h1>';
+            }else{
+                echo '<h1>Incorrect!</h1>';
+            }
 
         }
 

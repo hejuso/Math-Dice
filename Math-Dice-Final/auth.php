@@ -15,7 +15,7 @@ if(isset($_POST['jugador'])){
 
     if (!isset($_SESSION['jugador'])) {
 
-        $jugador1 = new Jugador($_POST['nombre'],$_POST['apellidos'],$_POST['edad'],$_POST['tipoJuego']);
+        $jugador1 = new Jugador($_POST['nombre'],$_POST['apellidos'],$_POST['edad'],$_POST['tipoJuego'],$_POST['lang']);
         
             //Inicializamos al jugador
         $_SESSION['jugador'] = $jugador1;

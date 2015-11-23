@@ -71,13 +71,32 @@
                     </select>
                   </div>
                 </div>
+
+                <!-- Idioma -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="language">Idioma</label>
+                  <div class="col-md-4"> 
+                    <label class="radio-inline" for="language-0">
+                      <input type="radio" name="lang" id="spanish" value="sp" checked="checked">
+                      Español
+                    </label> 
+                    <label class="radio-inline" for="language-1">
+                      <input type="radio" name="lang" id="english" value="en">
+                      English
+                    </label>
+                  </div>
+                  
+                <br><br>
                 
                 <!-- Submit -->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="submit"></label>
-                  <div class="col-md-4">
+                  <label class="col-md-5 control-label" for="submit"></label>
+                  <div class="col-md-5">
                     <button id="submit" name="submit" class="btn btn-primary">¡Jugar!</button>
                   </div>
+                </div>
+                
+
                 </div>
                 
                 </fieldset>

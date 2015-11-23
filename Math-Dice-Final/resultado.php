@@ -15,20 +15,7 @@ include('lib/Juego.php');
         
     </head>
     <body>
-        <div class="idioma">
-            <form method="get"action="resultado.php">    
-                <div class="btn-group btn-group-primary">
-                  <button class="btn btn-primary btn-md" type="button"><?php if($_GET['lang'] == 'en'){echo 'English';}else{echo 'Español';} ?></button>
-                  <button data-toggle="dropdown" class="btn btn-primary btn-md dropdown-toggle" type="button">
-                	  <span class="caret"></span></button>
-                	  
-                  <ul class="dropdown-menu">
-                	  <li><input class="btn btn-sm btn-default" type="submit" name="lang" value="sp"></a></li>
-                	  <li><input class="btn btn-sm btn-default" type="submit" name="lang" value="en"></a></li>
-                  </ul>
-                </div>
-            </form>
-        </div>
+        
         <?php
         
         include "lib/menuUsuario.php";
@@ -38,9 +25,11 @@ include('lib/Juego.php');
         <form role="form" action="resultado.php" method="post">
               
                 <div class="eligeDados">
-                    
-                   <h2>Elige dados:</h1>
-
+                    <?php if($jugador1->getLang() == 'sp'){ ?>
+                       <h1>Elige dados:</h1>
+                    <?php }else {?>
+                        <h1>Choose dice:</h1>
+                    <?php } ?>
 
                     <?php
                         //Esta función genera un numero aleatorio y asigna ese número a la url de la imagen.
@@ -64,7 +53,11 @@ include('lib/Juego.php');
                 
                 <div class="eligeSimbolo">
                 
-                    <h2>Elige símbolos:</h1>
+                    <?php if($jugador1->getLang() == 'sp'){ ?>
+                       <h1>Elige simbolo:</h1>
+                    <?php }else {?>
+                        <h1>Choose sign:</h1>
+                    <?php } ?>
 
                     <div class="simbolos">
                         
@@ -93,7 +86,11 @@ include('lib/Juego.php');
                 
                 <div class="seleccion">
                 
-                    <h2>Selección</h3>
+                    <?php if($jugador1->getLang() == 'sp'){ ?>
+                       <h1>Seleccion:</h1>
+                    <?php }else {?>
+                        <h1>Your choice:</h1>
+                    <?php } ?>
                     <div id="jugada">
                         
                         <input type="hidden" name="dadoTirada1" value=""/>
@@ -137,7 +134,11 @@ include('lib/Juego.php');
                     </div>
                 </div>
                 <a href="juego.php" class="btn btn-sm btn-primary btn-block" role="button">
-                    Volver</a> </form>
+                    <?php if($jugador1->getLang() == 'sp'){ ?>
+                       Volver
+                    <?php }else {?>
+                        Back
+                    <?php } ?></a> </form>
             </div>
         </div>
     </div>

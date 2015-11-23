@@ -71,8 +71,8 @@ include('lib/Juego.php');
                         <?php if($jugador1->getTipo() == "junior+"){ ?>
                             <img class="operacion" src="img/mas.png" name="operacion" value="+" width='100px'></img>
                             <img class="operacion" src="img/menos.png" value="-" width='100px'></img>
-                            <img class="operacion" src="img/division.png" value="/" width='100px'></img>
-                            <img class="operacion" src="img/multiplicacion.png" value="*" width='100px'></img>
+                            <img class="operacion operando" src="img/division.png" value="/" width='100px'></img>
+                            <img class="operacion operando" src="img/multiplicacion.png" value="*" width='100px'></img>
                             <input type="hidden" name="operacion1" value=""/>
                             <input type="hidden" name="operacion2" value=""/>
                             <input type="hidden" name="operacion3" value=""/>

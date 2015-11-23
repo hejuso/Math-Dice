@@ -118,3 +118,8 @@ small {
 .btn-group-info .dropdown-menu li > a:focus {
   background-color: #5bc0de !important;
 }
+
+.operando{
+    padding: 20px;
+    
+}

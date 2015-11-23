@@ -66,7 +66,7 @@ $(document).ready(function(){
             if(contadorOp<=4){
                 var value=$(this).attr("value");
                 var imgagen=$(this).attr("src");
-                $("#jugada" ).append( "<img src='"+imgagen+"' width='100px'>" );
+                $("#jugada" ).append( "<img class='operando' src='"+imgagen+"' width='100px'>" );
                 var opId="input[name='operacion"+contadorOp+"']";
                 $(opId).val(value);
                 contadorOp++;

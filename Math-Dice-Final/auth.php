@@ -8,6 +8,15 @@ include('lib/Jugador.php');
 //Iniciamos la session
 session_start();
 
+if(isset($_POST['jugador2'])){
+
+    $_SESSION['jugador']->setNombre($_POST['nombre']);
+    $_SESSION['jugador']->setApellidos($_POST['apellidos']);
+    $_SESSION['jugador']->setEdad($_POST['edad']);
+    
+}
+
+
 //Se crea el objeto jugador
 
 if(isset($_POST['jugador'])){
@@ -24,6 +33,7 @@ if(isset($_POST['jugador'])){
 
 }else{
     
+    
     if(isset($_SESSION['jugador'])){
         
         //Inicializamos al jugador
@@ -33,4 +43,6 @@ if(isset($_POST['jugador'])){
         header('Location: index.php');
     }
 }
+
+
 ?>

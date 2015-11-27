@@ -1,7 +1,8 @@
 
 <?php
 
-$lang= $jugador1->getLang();
+    $lang= $_SESSION['jugador']->getLang();
+
 /*
 if(isset($_POST['lang']) && strlen($_POST['lang'])>0){
     
@@ -86,6 +87,14 @@ $menu=array(
 <form method="post"action="juego.php">    
         <div class="btn-group btn-group-primary">
           <button class="btn btn-primary btn-md" type="button"><?php if($jugador1->getLang() == 'en'){echo 'English';}else{echo 'Español';} ?></button>
+        </div>
+    </form>
+</div>
+
+<div class="perfil">
+<form method="post"action="perfil.php">    
+        <div class="btn-group btn-group-primary">
+          <a href="perfil.php"><button class="btn btn-primary btn-md" type="button"><?php if($jugador1->getLang() == 'en'){echo 'Profile';}else{echo 'Perfil';} ?></button></a>
         </div>
     </form>
 </div>

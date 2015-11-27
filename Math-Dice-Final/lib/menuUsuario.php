@@ -9,7 +9,7 @@
                                 <img src="https://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
                             </div>
                             <div class="col-sm-6 col-md-8">
-                                <h4><?php echo "".$jugador1->getNombre()." ".$jugador1->getApellidos(); ?></h4>
+                                <h4><?php echo "".$_SESSION['jugador']->getNombre()." ".$_SESSION['jugador']->getApellidos(); ?></h4>
                                 <p>
                                     <br />
                                     
@@ -23,7 +23,7 @@
                                        Edad:
                                     <?php }else {?>
                                         Age:
-                                    <?php } ?> <?php echo " ".$jugador1->getEdad(); ?>
+                                    <?php } ?> <?php echo " ".$_SESSION['jugador']->getEdad(); ?>
                                     <br />
                                     <?php if($jugador1->getLang() == 'sp'){ ?>
                                        Puntos:

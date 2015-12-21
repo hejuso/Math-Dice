@@ -54,6 +54,27 @@
                   </div>
                 </div>
                 
+                <!-- Modal -->
+                  <div class="modal fade" id="aviso" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Cuidado</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>Introduzca solo números.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                
                 <!-- Modo de juego -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="tipoJuego">Tipo de juego</label>

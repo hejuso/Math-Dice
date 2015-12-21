@@ -75,6 +75,21 @@ class BaseDatos{
         
     }
     
+    function getPuntos($nombre, $apellidos){
+        
+        $consulta ="SELECT * FROM jugadores WHERE nombre = '".$nombre."' AND apellidos = '".$apellidos."'";
+        $resultado = $this->conexion->query($consulta);
+        
+        while ($fila = $resultado->fetch_assoc()) {
+
+            return $fila['puntos'];
+
+        }
+        
+        $resultado->free();
+        
+    }
+    
     function getIdioma($nombre, $apellidos){
         
         $consulta ="SELECT * FROM jugadores WHERE nombre = '".$nombre."' AND apellidos = '".$apellidos."'";

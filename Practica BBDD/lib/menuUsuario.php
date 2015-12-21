@@ -29,7 +29,7 @@
                                        Puntos:
                                     <?php }else {?>
                                         Points:
-                                    <?php } ?> <?php echo " ".$_SESSION['jugador']->getPuntos(); ?><br><br>
+                                    <?php } ?> <?php echo " ".$db->getPuntos($_SESSION['jugador']->getNombre(),$_SESSION['jugador']->getApellidos()); ?><br><br>
                                 <!-- Botón -->
                                 
                                 <?php if($jugador1->getLang() == 'sp'){ ?>

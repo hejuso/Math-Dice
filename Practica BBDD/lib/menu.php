@@ -79,22 +79,19 @@ $menu=array(
         <li><a href="instrucciones.php"><?php echo $menu['instrucciones'][$lang]?></a></li>
         <li><a href="acercaDe.php"><?php echo $menu['acercaDe'][$lang]?></a></li>
       </ul>
+      
     </div>
+    
+    <ul class="nav navbar-nav navbar-right">
+        <div class="idioma">
+            <a class="btn btn-primary btn-md"><?php if($jugador1->getLang() == 'en'){echo 'English';}else{echo 'Español';} ?></a>
+        </div>
+        <div class="perfil">
+            <a href="perfil.php" class="btn btn-primary btn-md" ><?php if($jugador1->getLang() == 'en'){echo 'Profile';}else{echo 'Perfil';} ?></a>
+        </div>
+      </ul>
+      
   </div>
 </nav>
 
-<div class="idioma">
-<form method="post"action="juego.php">    
-        <div class="btn-group btn-group-primary">
-          <button class="btn btn-primary btn-md" type="button"><?php if($jugador1->getLang() == 'en'){echo 'English';}else{echo 'Español';} ?></button>
-        </div>
-    </form>
-</div>
 
-<div class="perfil">
-<form method="post"action="perfil.php">    
-        <div class="btn-group btn-group-primary">
-          <a href="perfil.php"><button class="btn btn-primary btn-md" type="button"><?php if($jugador1->getLang() == 'en'){echo 'Profile';}else{echo 'Perfil';} ?></button></a>
-        </div>
-    </form>
-</div>
